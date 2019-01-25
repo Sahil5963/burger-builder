@@ -1,0 +1,19 @@
+.MenuIcon {
+    display: none;
+}
+
+@media (max-width:500px) {
+    .MenuIcon {
+        display: block;
+        padding: 2px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+}
+
+.MenuBar {
+    width: 26px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+}
