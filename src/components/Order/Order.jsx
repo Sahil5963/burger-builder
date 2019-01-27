@@ -12,7 +12,6 @@ const order = (props) => {
             amount: props.ingredients[ingredientName]
             }
         );
-        console.log("jhawsdaws")
     }
 
     const ingredientsOut = ingredients.map(ingredient => {
