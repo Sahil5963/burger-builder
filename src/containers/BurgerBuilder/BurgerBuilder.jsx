@@ -8,7 +8,8 @@ import axios from '../../axios-orders';
 import Spinner from '../../components/UI/Spinner/Spinner'
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler'
 import { connect } from 'react-redux';
-import * as actions from '../../store/actions/index'
+import * as actions from '../../store/actions/index';
+import {withRouter} from 'react-router-dom'
 
 
 class BurgerBuilder extends Component {
@@ -37,11 +38,10 @@ class BurgerBuilder extends Component {
     if (this.props.isAuthenticated) {
       this.setState({ purchasing: true })
     } else {
-      this.props.onSetAuthRedirectPath('/checkout')
+      this.props.onSetAuthRedirectPath('/checkout');
       this.props.history.push('/auth');
     }
 
-    
   }
 
   purchaseCancelHandler = () => {
@@ -124,4 +124,4 @@ const mapDispatchToProps = dispatch => {
 
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(withErrorHandler(BurgerBuilder,axios));
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(withErrorHandler(BurgerBuilder,axios)));
