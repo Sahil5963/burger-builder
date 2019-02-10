@@ -15,8 +15,6 @@ import {withRouter} from 'react-router-dom'
 class BurgerBuilder extends Component {
   state = {
     purchasing: false,
-    loading: false,
-    error:false
   };
 
 

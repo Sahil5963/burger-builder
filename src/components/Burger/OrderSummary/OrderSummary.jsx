@@ -1,13 +1,7 @@
 import React, { Component } from 'react'
 import Button from '../../UI/Button/Button';
-import Spinner from '../../UI/Spinner/Spinner';
 
 export default class OrderSummary extends Component {
-
-
-    componentWillUpdate() {
-        console.log("[OrderSummary] Will Update");
-    }
 
     render() {
 
